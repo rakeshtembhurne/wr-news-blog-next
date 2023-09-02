@@ -14,7 +14,7 @@ const siteMetadata = {
   email: 'rakesh@tembhurne.com',
   github: 'https://github.com/rakeshtembhurne',
   twitter: 'https://twitter.com/tembhurnerakesh',
-  facebook: 'https://facebook.com/trakesh',
+  facebook: 'https://facebook.com/tembhurnerakesh',
   youtube: 'https://youtube.com/TechBitesWithRocky',
   linkedin: 'https://www.linkedin.com/in/rakeshtembhurne',
   locale: 'en-US',
@@ -40,7 +40,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    // provider: 'buttondown',
   },
   comments: {
     // If you want to use an analytics provider you have to add it to the
