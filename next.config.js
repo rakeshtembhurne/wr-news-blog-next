@@ -67,7 +67,11 @@ module.exports = () => {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     images: {
-      domains: ['picsum.photos'],
+      domains: [
+        'picsum.photos',
+        'rakesh.tembhurne.com',
+        'rakesh-tembhurne-blog-nextjs.netlify.app',
+      ],
     },
     experimental: {
       appDir: true,
