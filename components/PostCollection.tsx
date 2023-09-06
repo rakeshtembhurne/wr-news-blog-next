@@ -30,7 +30,6 @@ const PostCollection = ({ posts, MAX_DISPLAY }) => {
                 className="rounded-lg aspect-[4/3]"
                 src={displayImage}
                 alt={title}
-                loading="lazy"
               />
             </Link>
             <div className="order-first xl:order-none xl:col-span-2">
