@@ -16,7 +16,7 @@ const siteMetadata = {
   github: 'https://github.com/rakeshtembhurne',
   twitter: 'https://twitter.com/tembhurnerakesh',
   facebook: 'https://facebook.com/tembhurnerakesh',
-  youtube: 'https://youtube.com/TechBitesWithRocky',
+  youtube: 'https://www.youtube.com/@TechBytesByRocky',
   linkedin: 'https://www.linkedin.com/in/rakeshtembhurne',
   locale: 'en-US',
   analytics: {
