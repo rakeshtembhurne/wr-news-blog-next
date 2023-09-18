@@ -16,16 +16,6 @@ export default function AmpLayout({ children }: { children: React.ReactNode }) {
 
         <NoSSR>
           <script async src="https://cdn.ampproject.org/v0.js"></script>
-          <script
-            async
-            custom-element="amp-video"
-            src="https://cdn.ampproject.org/v0/amp-video-0.1.js"
-          ></script>
-          <script
-            async
-            custom-element="amp-story"
-            src="https://cdn.ampproject.org/v0/amp-story-1.0.js"
-          ></script>
           <style amp-custom="">
             {`
             amp-story { color:  rgb(249 115 22); font-weight: bold; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI ", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji ", "Segoe UI Emoji ", "Segoe UI Symbol "; }
