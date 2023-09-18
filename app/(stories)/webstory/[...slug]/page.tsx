@@ -1,5 +1,5 @@
+import { redirect } from 'next/navigation'
 import AmpStory from '@/components/AmpStory'
-import PageTitle from '@/components/PageTitle'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allWebStories, allAuthors } from 'contentlayer/generated'
 import type { Authors, WebStory } from 'contentlayer/generated'
@@ -15,16 +15,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const sortedCoreContents = allCoreContent(sortPosts(allWebStories))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
   if (postIndex === -1) {
-    return (
-      <div className="mt-24 text-center">
-        <PageTitle>
-          Under Construction{' '}
-          <span role="img" aria-label="roadwork sign">
-            🚧
-          </span>
-        </PageTitle>
-      </div>
-    )
+    return redirect('/stories')
   }
 
   const webStory = allWebStories.find((p) => p.slug === slug) as WebStory
