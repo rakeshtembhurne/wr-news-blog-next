@@ -3,7 +3,6 @@ import AmpStory from '@/components/AmpStory'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allWebStories, allAuthors } from 'contentlayer/generated'
 import type { Authors, WebStory } from 'contentlayer/generated'
-import { genPageMetadata } from 'app/seo'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
 
