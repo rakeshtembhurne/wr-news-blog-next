@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 18px;
+}
+article p {
+  margin-bottom: 1.6em;
+  line-height: 32px;
+}
 .task-list-item::before {
   @apply hidden;
 }
