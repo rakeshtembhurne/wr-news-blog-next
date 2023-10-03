@@ -4,13 +4,13 @@ date: 2021-11-29T05:15:44.000Z
 lastmod: 2021-11-29T05:15:44.000Z
 tags: ['Terminal Commands']
 summary: Learn the basics of running terminal commands and important terminal commands to navigate between the folders in your machine in Part 1.
-images: ['/static/images/2021/11/essential-commands-1.png']
+images: ['/static/images/2021/11/essential-commands-1.webp', '/static/images/2021/11/standard-unix-filesystem-hierarchy.webp', '/static/images/2021/11/image-1.webp', '/static/images/2021/11/image-2.webp']
 draft: false
 picsumId: 341
 category: Tech Bytes
 ---
 
-![Essential Terminal Commands](/static/images/2021/11/essential-commands-1.png)
+![Essential Terminal Commands](/static/images/2021/11/essential-commands-1.webp)
 
 Mastering the terminal commands in Linux or mac is an important skill. Before you enter Web Development or after you get some experience in the programming world, it is very important to have good skills in mac terminal or Linux command prompt as they call it.
 
@@ -28,7 +28,7 @@ The skills that you need to master in the terminal is to create and edit files, 
 
 Linux files are organized in a tree-like structure where "/" is called the root folder and all other folders/file resides somewhere in that root folder.
 
-![Standard Unix FileSystem Hierarchy](/static/images/2021/11/standard-unix-filesystem-hierarchy.png)
+![Standard Unix FileSystem Hierarchy](/static/images/2021/11/standard-unix-filesystem-hierarchy.webp)
 
 So it means, every file or folder has a path relative to the root directory. For example, every user that gets created commonly has a home directory path as **_/home/rakesh_** like name where _rakesh_ is my username. This is called a _full path_.  The home path in the case of Mac OS is _/Users/rakesh_, the concept is still the same.
 
@@ -51,14 +51,14 @@ First, you need to start the terminal by searching "terminal" in Spotlight Searc
     $ command [--param1 param1Value -param2 -param3]
 
 So basically, each terminal command can be run with or without parameters. When no parameters are passed, it runs with default values parameters. Parameters give extra information to the terminal command which is then used by the command to do the customized work.
-![](/static/images/2021/11/image-1.png)Example terminal command: Shows 'ls -l' command and its output.
+![](/static/images/2021/11/image-1.webp)Example terminal command: Shows 'ls -l' command and its output.
 
 ## Terminal commands for navigating between the folders
 
 ### The _pwd_ command:
 
 The first command is **_pwd_**. this command prints the full path of the working directory or directory in which you are at the terminal.
-![](/static/images/2021/11/image-2.png)
+![](/static/images/2021/11/image-2.webp)
 
 ### The **_ls_** command
 
@@ -69,7 +69,7 @@ Commonly used parameters are **_-l_** which is used to show contents in a long l
 In the \*nix systems, the files start with "." (dot) are considered to be hidden and not shown by default. To view hidden files we use param **_-a_** with the **_ls_** command.
 
 Another two important parameters are **_-t_** which is used to sort contents with respect to created/modified time and **_-r_** which is applied to reverse the sorting order.
-![](/static/images/2021/11/image-4.png)Example of "ls" command used with multiple parameters "-lat" and its output
+![](/static/images/2021/11/image-4.webp)Example of "ls" command used with multiple parameters "-lat" and its output
 
 ### The **_cd_** command
 
@@ -84,7 +84,7 @@ An important parameter that _mkdir_ command takes is **_-p_**parameter. If you w
     mkdir -p one/two/three
 
 The above command will create folder "one", then will create folder "two" inside it, and then create folder "three" inside folder "two". If the parameter -p is not passed, there will be an error.
-![](/static/images/2021/11/image-5.png)Example of terminal command "mkdir". Shows how can we create folders inside folder with just one command.
+![](/static/images/2021/11/image-5.webp)Example of terminal command "mkdir". Shows how can we create folders inside folder with just one command.
 In upcoming parts, we will see Terminal Commands for creating, reading, and writing files, commands for copying, pasting, moving, and deleting files and folders, commands for remotely accessing other machines, commands to search anything on the machine, and so on.
 
 To know more commands, please visit Part 2 of the article.

@@ -51,7 +51,7 @@ const Introduction = () => {
         <div className="hidden xl:block">
           <div className="z-10 mb-8 scale-100 transition-all duration-200 ease-out hover:z-50 xl:mb-0 xl:hover:scale-[1.15]">
             <Image
-              src="/static/images/avatar.png"
+              src="/static/images/logo.webp"
               alt="avatar"
               width={550}
               height={550}

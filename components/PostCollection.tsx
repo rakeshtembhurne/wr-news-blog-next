@@ -27,7 +27,7 @@ const PostCollection = ({ posts, MAX_DISPLAY }) => {
               <Image
                 width={700}
                 height={480}
-                className="rounded-lg aspect-[4/3]"
+                className="rounded-lg"
                 src={displayImage}
                 alt={title}
               />

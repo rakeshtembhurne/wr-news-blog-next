@@ -8,9 +8,9 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://rakesh.tembhurne.com',
   siteRepo: 'https://github.com/rakeshtembhurne/rakesh-tembhurne-blog-next',
-  siteLogo: '/static/images/logo.png',
-  // socialBanner: '/static/images/twitter-card.png',
-  socialBanner: '/static/images/logo.png',
+  siteLogo: '/static/images/logo.webp',
+  // socialBanner: '/static/images/twitter-card.webp',
+  socialBanner: '/static/images/logo.webp',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'rakesh@tembhurne.com',
   github: 'https://github.com/rakeshtembhurne',

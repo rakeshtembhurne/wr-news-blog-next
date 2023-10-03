@@ -2,7 +2,7 @@ const projectsData = [
   {
     title: 'Shop',
     description: `Books and courses created by Rakesh Tembhurne.`,
-    imgSrc: '/static/images/logo.png',
+    imgSrc: '/static/images/logo.webp',
     href: 'https://shop.tembhurne.com',
   },
   // {
