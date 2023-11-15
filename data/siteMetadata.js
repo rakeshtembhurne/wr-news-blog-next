@@ -1,18 +1,18 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Rakesh Tembhurne',
+  title: '',
   author: 'Rakesh Tembhurne',
-  headerTitle: 'Rakesh Tembhurne',
-  description: 'A blog on technology and web development by Rocky',
+  headerTitle: '',
+  description: '',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://rakesh.tembhurne.com',
-  siteRepo: 'https://github.com/rakeshtembhurne/rakesh-tembhurne-blog-next',
+  siteUrl: 'https://google.com',
+  siteRepo: 'https://github.com/rakeshtembhurne/base-blog-nextjs',
   siteLogo: '/static/images/logo.webp',
   // socialBanner: '/static/images/twitter-card.webp',
   socialBanner: '/static/images/logo.webp',
   // mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'rakesh@tembhurne.com',
+  email: '',
   github: 'https://github.com/rakeshtembhurne',
   twitter: 'https://twitter.com/tembhurnerakesh',
   facebook: 'https://facebook.com/tembhurnerakesh',
@@ -25,7 +25,7 @@ const siteMetadata = {
     // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
     umamiAnalytics: {
       // We use an env variable for this site to avoid other users cloning our analytics ID
-      umamiWebsiteId: '054e1e47-02a0-469b-ba97-010045424bb0', // e.g. 123e4567-e89b-12d3-a456-426614174000
+      umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     },
     // plausibleAnalytics: {
     //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
@@ -35,7 +35,7 @@ const siteMetadata = {
     //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     // },
     googleAnalytics: {
-      googleAnalyticsId: 'G-M26EVQWDZS', // e.g. G-XXXXXXX
+      googleAnalyticsId: '', // e.g. G-XXXXXXX
     },
   },
   newsletter: {
