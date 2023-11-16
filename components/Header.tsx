@@ -20,7 +20,7 @@ const Header = () => {
                 height={45}
                 loading="lazy"
                 decoding="async"
-                className="rounded-full"
+                // className="rounded-full"
               />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
