@@ -13,7 +13,7 @@ const ContentSecurityPolicy = `
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self' fonts.gstatic.com fonts.googleapis.com data:;
-  frame-src giscus.app localhost:3000 *.tembhurne.com *.twitter.com; 
+  frame-src giscus.app localhost:3000 *.tembhurne.com *.twitter.com *.youtube.com; 
 `
 
 const securityHeaders = [
