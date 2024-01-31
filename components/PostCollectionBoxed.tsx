@@ -31,8 +31,8 @@ const BlogCard = ({ post }) => {
               alt={title}
             />
             <Link
+              className="absolute text-white top-1 right-1 text-sm font-bold bg-red-500/70 p-1 rounded"
               href={`/category/${ghSlugger(category)}`}
-              className="absolute text-pink-500 top-1 right-1 text-sm font-bold"
             >
               {category}
             </Link>
