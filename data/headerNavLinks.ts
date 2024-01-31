@@ -1,14 +1,10 @@
-const headerNavLinks = [
-  { href: '/', title: 'Home' },
-  { href: '/category/politics', title: 'Politics' },
-  { href: '/category/entertainment', title: 'Entertainment' },
-  { href: '/category/technology', title: 'Technology' },
-  // { href: '/blog', title: 'Blog' },
-  // { href: '/stories', title: 'Web Stories' },
-  // { href: '/category', title: 'Categories' },
-  // { href: '/tags', title: 'Tags' },
-  // { href: '/projects', title: 'Projects' },
-  { href: '/about', title: 'About' },
-]
+import categoryData from 'app/category-data.json'
+
+const headerNavLinks = [{ href: '/', title: 'Home' }]
+Object.keys(categoryData).forEach((category) => {
+  const title = category[0].toUpperCase() + category.split(' ').join('-').slice(1)
+  headerNavLinks.push({ href: `/category/${category}`, title: title })
+})
+headerNavLinks.push({ href: '/about', title: 'About' })
 
 export default headerNavLinks
