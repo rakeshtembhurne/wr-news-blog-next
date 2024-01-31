@@ -7,13 +7,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is cdn.ampproject.org *.googleapis.com *.googletagmanager.com *.google-analytics.com *.tembhurne.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is cdn.ampproject.org *.googleapis.com *.googletagmanager.com *.google-analytics.com *.tembhurne.com *.twitter.com;
   style-src 'self' 'unsafe-inline' fonts.gstatic.com fonts.googleapis.com;
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self' fonts.gstatic.com fonts.googleapis.com data:;
-  frame-src giscus.app localhost:3000 *.tembhurne.com; 
+  frame-src giscus.app localhost:3000 *.tembhurne.com *.twitter.com; 
 `
 
 const securityHeaders = [
@@ -74,9 +74,9 @@ module.exports = () => {
     },
     experimental: {
       appDir: true,
-      amp: {
-        skipValidation: false,
-      },
+      // amp: {
+      //   skipValidation: false,
+      // },
     },
     async headers() {
       return [

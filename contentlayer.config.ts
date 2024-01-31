@@ -62,6 +62,23 @@ function createTagCount(allBlogs) {
   writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
 }
 
+function createCategoryCount(allBlogs) {
+  const categoryCount: Record<string, number> = {}
+  allBlogs.forEach((file) => {
+    if (file.category && (!isProduction || file.draft !== true)) {
+      file.category.forEach((category) => {
+        const formattedCategory = GithubSlugger.slug(category)
+        if (formattedCategory in categoryCount) {
+          categoryCount[formattedCategory] += 1
+        } else {
+          categoryCount[formattedCategory] = 1
+        }
+      })
+    }
+  })
+  writeFileSync('./app/category-data.json', JSON.stringify(categoryCount))
+}
+
 function createSearchIndex(allBlogs) {
   if (
     siteMetadata?.search?.provider === 'kbar' &&
@@ -74,45 +91,6 @@ function createSearchIndex(allBlogs) {
     console.log('Local search index generated...')
   }
 }
-
-export const WebStory = defineDocumentType(() => ({
-  name: 'WebStory',
-  filePathPattern: 'webstory/**/*.mdx',
-  contentType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true },
-    date: { type: 'date', required: true },
-    tags: { type: 'list', of: { type: 'string' }, default: [] },
-    lastmod: { type: 'date' },
-    draft: { type: 'boolean' },
-    summary: { type: 'string' },
-    images: { type: 'list', of: { type: 'string' } },
-    authors: { type: 'list', of: { type: 'string' } },
-    layout: { type: 'string' },
-    bibliography: { type: 'string' },
-    canonicalUrl: { type: 'string' },
-    picsumId: { type: 'number', required: false },
-    category: { type: 'string', required: false },
-    story: { type: 'json', required: true },
-  },
-  computedFields: {
-    ...computedFields,
-    structuredData: {
-      type: 'json',
-      resolve: (doc) => ({
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: doc.title,
-        datePublished: doc.date,
-        dateModified: doc.lastmod || doc.date,
-        description: doc.summary,
-        image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
-        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
-        author: doc.authors,
-      }),
-    },
-  },
-}))
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -131,7 +109,7 @@ export const Blog = defineDocumentType(() => ({
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
     picsumId: { type: 'number', required: false },
-    category: { type: 'string', required: false },
+    category: { type: 'list', of: { type: 'string' }, default: [] },
   },
   computedFields: {
     ...computedFields,
@@ -172,7 +150,7 @@ export const Authors = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors, WebStory],
+  documentTypes: [Blog, Authors],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
@@ -193,6 +171,7 @@ export default makeSource({
   },
   onSuccess: async (importData) => {
     const { allBlogs } = await importData()
+    createCategoryCount(allBlogs)
     createTagCount(allBlogs)
     createSearchIndex(allBlogs)
   },

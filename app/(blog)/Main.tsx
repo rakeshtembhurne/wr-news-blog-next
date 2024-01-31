@@ -3,7 +3,8 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import PostCollection from '@/components/PostCollection'
+// import PostCollection from '@/components/PostCollection'
+import PostCollectionBoxed from '@/components/PostCollectionBoxed'
 import PostCollectionWithoutImage from '@/components/PostCollectionWithoutImage'
 import Introduction from '@/components/Introduction'
 
@@ -14,7 +15,8 @@ export default function Home({ posts }) {
     <>
       <div className="">
         <Introduction />
-        <PostCollection posts={posts} MAX_DISPLAY={MAX_DISPLAY} />
+        {/* <PostCollection posts={posts} MAX_DISPLAY={MAX_DISPLAY} /> */}
+        <PostCollectionBoxed posts={posts} MAX_DISPLAY={MAX_DISPLAY} />
         {/* <PostCollectionWithoutImage posts={posts} MAX_DISPLAY={MAX_DISPLAY} /> */}
 
         {posts.length > MAX_DISPLAY && (
