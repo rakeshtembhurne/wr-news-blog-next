@@ -22,7 +22,7 @@ const BlogCard = ({ post }) => {
     <>
       <div className="w-full px-4 md:w-1/2 lg:w-1/3">
         <div className="mb-10 w-full">
-          <div className="mb-8 overflow-hidden rounded relative">
+          <div className="mb-4 overflow-hidden rounded relative">
             <Image
               width={700}
               height={480}
